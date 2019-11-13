@@ -14,4 +14,8 @@ app.use(parserMiddleware);
 
 app.listen(port, () => console.log(`Listen on port ${port}`));
 
+const productsRouter = require("./products/router");
+app.use(productsRouter);
+
 const db = require("./db");
+const Product = require("./products/model");
